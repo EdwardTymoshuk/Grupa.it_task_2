@@ -20,7 +20,7 @@ let booksArr = localStorageBooks ? [...localStorageBooks] : []
 const validateInput = (input, fieldName, min) => {
     let validated
     !input.value ? (input.classList.add('input-error'), input.nextSibling.nextSibling.innerHTML = `Pole ${fieldName} nie może być puste.`) :
-        input.value.length < min ? (input.classList.add('input-error'), input.nextSibling.nextSibling.innerHTML = `Pole ${fieldName} nie może krótsze, niż ${min} znaki(-ów)`) :
+        input.value.length < min ? (input.classList.add('input-error'), input.nextSibling.nextSibling.innerHTML = `Pole ${fieldName} nie może być krótsze, niż ${min} znaki(-ów)`) :
             (input.classList.remove('input-error'), input.nextSibling.nextSibling.innerHTML = ``, validated = true)
     return validated
 }
