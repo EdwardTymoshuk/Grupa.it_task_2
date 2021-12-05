@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Styles files-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Scripts  -->
+    <script async src="script.js"></script>
+</head>
+
+<body>
+    <header id="header" class="header">BIBLIOTEKA KSIĄŻEK</header>
+    <article id="article" class="article">
+        <section id="books-list" class="books-list">
+            <h1>Wszystkie książki</h1>
+            <table class="books-list-table" cellspacing="0">
+                <thead>
+                    <tr>
+                        <td>Tytuł</td>
+                        <td>Autor</td>
+                        <td style="width: 5vw">Priorytet</td>
+                        <td style="width: 25vw">Kategoria</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <tr>
+                        <td>Sherlock Holmes</td>
+                        <td>Arthur Conan Doyle</td>
+                        <td>5</td>
+                        <td>Kryminał</td>
+                    </tr>
+                    <tr>
+                        <td>Skazani na Shawshank</td>
+                        <td>Stephen King</td>
+                        <td>5</td>
+                        <td>Literatura piękna</td>
+                    </tr>
+                    <tr>
+                        <td>Sztuka zwycięstwa. Wspomnienia twórcy NIKE</td>
+                        <td>Phil Knight</td>
+                        <td>4</td>
+                        <td>Biografia</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="modal-btn" class="btn new-book-btn">+ Dodaj</button>
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h1>Dodaj nową książkę</h1>
+                    <form id="modal-form" class="modal-form">
+                        <label for="title">Tytuł</label>
+                        <input id="title" name="title" required type="text" class="new-book-title"
+                            placeholder="Podaj tytuł" />
+                        <span id="new-book-title-error" class="span-error"></span>
+
+                        <label for="author">Autor</label>
+                        <input id="author" name="author" required type="text" class="new-book-author"
+                            placeholder="Podaj autora" />
+                        <span id="new-book-author-error" class="span-error"></span>
+
+                        <label for="priority">Priorytet</label>
+                        <select id="priority" name="priority" required class="new-book-priority">
+                            <option value="0">Wybierz</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <span id="new-book-priority-error" class="span-error"></span>
+
+                        <label for="category">Kategoria</label>
+                        <select id="category" name="category" required class="new-book-category">
+                            <option value="0">Wybierz</option>
+                            <option value="Kryminał">Kryminał</option>
+                            <option value="Literatura piękna">Literatura piękna</option>
+                            <option value="Biografia">Biografia</option>
+                        </select>
+                        <span id="new-book-category-error" class="span-error"></span>
+                        <button id="add-book-btn" class="btn add-book-btn">Dodaj</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </article>
+</body>
+</html>
